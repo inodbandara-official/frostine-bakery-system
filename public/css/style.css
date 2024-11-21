@@ -1,0 +1,17 @@
+/*CSS LIBRARY */
+
+
+
+/*COMPONENTS */
+@import url('components/topnavbar.css');
+@import url('components/registerform.css');
+@import url('components/buttons.css');
+@import url('components/login.css');
+@import url('components/serviceDesk.css')
+
+/*FONTS
+@font-face {
+  font-family: Poppins-Regular;
+  src: url(fonts/Poppins-Regular.ttf);
+}*/
+
