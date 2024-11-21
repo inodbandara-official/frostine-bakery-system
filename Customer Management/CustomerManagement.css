@@ -1,0 +1,289 @@
+body, html {
+    font-family: 'Vidaloka', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-width: 1024px;
+    overflow-x: auto;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 15px;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar a.active, .sidebar a:hover {
+    background-color: #C98D83;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index:9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    text-align: center;
+    margin: 3% auto; /* Reduced top margin to accommodate larger size */
+    padding: 40px; /* Increased padding */
+    border: 1px solid #888;
+    width: 70%; /* Increased width from 50% to 70% */
+    position: relative;
+    z-index: 10000; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.modal-content form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-content label {
+    font-size: 1.1em;
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.modal-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+  .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+  }
+
+
+  .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .btn {
+      min-width: 120px;
+      padding: 12px 24px;
+  }
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.reset {
+    background-color: #f44336;
+    color: white;
+}
+
+.reset:hover {
+    background-color: #d32f2f;
+}
+
+.submit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit:hover {
+    background-color: #388E3C;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-x: auto;
+    height: calc(100vh - 80px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C98D83;
+    padding: 10px 20px;
+    color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.search-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.add-customer {
+    background-color: black;
+    color: white;
+    text-align: right;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.add-customer:hover {
+    background-color: maroon;
+    color: white;
+}
+
+.customer-list {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.table-container {
+    overflow-x: auto;
+    max-height: calc(100vh - 250px);
+    position: relative;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 2px;
+}
+.page-number {
+    margin: 0 5px;
+}
+
+.icon-supplier::before {
+    content: url('images/supplier.png');
+}
+
