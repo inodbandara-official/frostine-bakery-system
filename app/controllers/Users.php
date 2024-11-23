@@ -3,6 +3,13 @@ class Users extends Controller {
     public function __construct() {
         $this->userModel = $this->model('M_Users');
     }
+    public function index() {
+        $data = [
+            'users' => $this->userModel->getUsers() // Example function to retrieve user data
+        ];
+        $this->view('pages/v_index', $data);
+    }
+    
 
     public function register() {
         // Check if the request is POST
@@ -116,7 +123,9 @@ class Users extends Controller {
                 $loggedUser = $this->userModel->login( $data['email'],$data['password']);
 
                 if($loggedUser){
-                   redirect('Pages/index');
+                   //create user sessions
+                    $this->createUserSession($loggedUser);
+
                 }else{
                     $data['password_err'] = 'Incorrect password';
                     //load view again with errors
@@ -139,6 +148,31 @@ class Users extends Controller {
             //load view
             $this->view('users/v_login', $data);
         }
+    }
+    public function createUserSession($user){
+        $_SESSION['user_id'] = $user->id;
+        $_SESSION['user_name'] = $user->name;
+        $_SESSION['user_email'] = $user->email;
+
+        redirect('Pages/index');
+
+    }
+    public function logout(){
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_name']);
+        unset($_SESSION['user_email']);
+        session_destroy();
+        redirect('Users/login');
+
+    }
+    public function isLoggedIn(){
+        if(isset($_SESSION['user_id'])){
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
 }

@@ -48,6 +48,11 @@
        }
 
      }
+     public function getUsers() {
+      $this->db->query("SELECT * FROM users"); // Adjust the table name
+      return $this->db->resultSet();
+  }
+  
     }
  
 ?>

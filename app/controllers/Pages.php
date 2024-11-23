@@ -5,7 +5,7 @@
       }
       public function index(){
         $data = [];
-        $this->view('Branch_M/v_serviceDesk.php',$data);
+        $this->view('pages/v_index',$data);
 
       }
       public function about(){

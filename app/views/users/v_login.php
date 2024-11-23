@@ -16,7 +16,7 @@
             <?php if (!empty($loginError)) : ?>
                 <div class="error-message"><?= htmlspecialchars($loginError); ?></div>
             <?php endif; ?>
-            <form action="login.php" method="POST">
+            <form action="<?php echo URLROOT; ?>/Users/login" method="POST">
                 <div class="input-group">
                     <input type="email" name="email" placeholder="Email" value="<?php echo $data['email']; ?>" >
                     <span class="form-invalid"> <?php echo $data['email_err']; ?></span>
@@ -28,7 +28,7 @@
                 <button type="submit" name="login" class="login-btn">Login</button>
             </form>
             <a href="forgotPassword.php" class="forgot-password">Forgot Password?</a>
-            <a href="registration.php" class="forgot-password">New Account</a>
+            <a href="<?php echo URLROOT; ?>/Users/register" class="forgot-password">New Account</a>
         </div>
     </div>
     <?php require APPROOT.'/views/inc/footer.php'?>

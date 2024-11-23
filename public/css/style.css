@@ -3,11 +3,13 @@
 
 
 /*COMPONENTS */
-@import url('components/topnavbar.css');
+/*@import url('components/topnavbar.css');*/
 @import url('components/registerform.css');
 @import url('components/buttons.css');
 @import url('components/login.css');
-@import url('components/serviceDesk.css')
+@import url('components/serviceDesk.css');
+@import url('components/verticalnavbar.css');
+@import url('components/addcashier.css');
 
 /*FONTS
 @font-face {

@@ -33,7 +33,7 @@
                 </div>
                 <button type="submit" name="submit" class="signup-btn">Sign Up</button>
             </form>
-            <a href="login.php" class="login-link">Already have an account? Log in</a>
+            <a href="<?php echo URLROOT; ?>/Users/login" class="login-link">Already have an account? Log in</a>
         </div>
     </div>
   <?php require APPROOT.'/views/inc/footer.php'?>
