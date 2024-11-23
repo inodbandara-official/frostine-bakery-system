@@ -1,0 +1,34 @@
+/* Sidebar */
+.sidebar {
+  width: 80px;
+  height: 100vh; /* Ensures sidebar stretches the full height */
+  background-color: #faf5ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixes sidebar in place */
+  left: 0; /* Aligns sidebar to the left */
+  top: 0;
+  z-index: 1; /* Keeps it on top */
+}
+
+.sidebar .logo {
+  width: 75px;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a img {
+  width: 30px;
+}
