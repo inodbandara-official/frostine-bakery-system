@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frostine Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Frostine Logo">
+            <h2>FROSTINE</h2>
+            <p>Ven to Doorstep. Effortless!</p>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><i class="fas fa-chart-line"></i> Dashboard</li>
+                <li><i class="fas fa-users"></i> User Management</li>
+                <li><i class="fas fa-truck"></i> Supplier Management</li>
+                <li><i class="fas fa-cake"></i> Product Management</li>
+                <li><i class="fas fa-user"></i> Customer Management</li>
+                <li><i class="fas fa-eye"></i> View Orders</li>
+            </ul>
+        </nav>
+        <button class="logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Dashboard</h1>
+            <div class="user-profile">
+                <img src="assets/admin-avatar.png" alt="Admin">
+                <span>Danuka Kalhara</span>
+                <p>System Administrator</p>
+            </div>
+        </header>
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Registered Users</h3>
+                <p>129</p>
+            </div>
+            <div class="card">
+                <h3>Current Orders</h3>
+                <p>15</p>
+            </div>
+            <div class="card">
+                <h3>Active Carts</h3>
+                <p>6</p>
+            </div>
+        </div>
+        <div class="top-section">
+            <div class="top-products">
+                <h2>Top Products</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="assets/honey-waffles.png" alt="Honey Waffles">
+                        <p>Honey Waffles</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="assets/butter-honey-bread.png" alt="Butter & Honey Bread">
+                        <p>Butter & Honey Bread</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="assets/strawberry-pancake.png" alt="Strawberry Pancake">
+                        <p>Strawberry Pancake</p>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar">
+                <h2>April 2021</h2>
+                <div class="calendar-widget">
+                    <!-- Calendar content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
